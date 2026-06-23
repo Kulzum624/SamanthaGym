@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import BreadcrumbHeader from '../components/BreadcrumbHeader';
 import NewsletterSection from '../components/NewsletterSection';
+import img6 from '../assets/images/6.webp';
 
 export default function BlogStyle1() {
   const posts = [
@@ -25,7 +26,7 @@ export default function BlogStyle1() {
     },
     {
       title: "Training at home: how to maintain the tone",
-      img: "https://images.unsplash.com/photo-1477093782505-e10ffe6a99b7?w=900&q=80",
+      img: img6,
       cat: "lifestyle",
       cat2: "health",
       author: "By Author Name",
@@ -47,26 +48,26 @@ export default function BlogStyle1() {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-[128px]">
-      <BreadcrumbHeader 
-        title="Healthy Tips & Tricks" 
-        current="Blog Style 1" 
+      <BreadcrumbHeader
+        title="Healthy Tips & Tricks"
+        current="Blog Style 1"
         breadcrumbs={[{ name: 'Blog', path: '#' }]}
       />
 
       <section className="py-24 bg-white border-b border-gray-100">
         <div className="max-w-5xl mx-auto px-4 lg:px-8 space-y-12">
           {posts.map((post, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
               whileHover={{ y: -4, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)' }}
               className="flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden border border-gray-100 transition-all duration-300 group"
             >
               {/* Left Image */}
               <div className="w-full md:w-[400px] h-64 md:h-auto overflow-hidden shrink-0">
-                <img 
-                  src={post.img} 
-                  alt={post.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                <img
+                  src={post.img}
+                  alt={post.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
 
@@ -86,7 +87,7 @@ export default function BlogStyle1() {
                 <h3 className="font-poppins font-bold text-2xl md:text-3xl text-primary-dark mb-4 group-hover:text-primary-pink transition-colors">
                   <Link to="/blog-details">{post.title}</Link>
                 </h3>
-                
+
                 <p className="text-muted leading-relaxed mb-6">
                   Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
                 </p>

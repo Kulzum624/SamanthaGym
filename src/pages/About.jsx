@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import BreadcrumbHeader from '../components/BreadcrumbHeader';
 import NewsletterSection from '../components/NewsletterSection';
 import img4 from '../assets/images/4.webp';
+import img5 from '../assets/images/5.webp';
 
 const Counter = ({ end, label }) => {
   const [count, setCount] = useState(0);
@@ -195,7 +196,7 @@ export default function About() {
       </section>
 
       {/* Start Changing Your Life CTA */}
-      <section className="py-24 bg-light">
+      <section className="bg-light">
         <div className="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col md:flex-row items-center gap-16">
           <div className="w-full md:w-1/2">
             <motion.h3
@@ -214,7 +215,7 @@ export default function About() {
             </motion.div>
           </div>
           <div className="w-full md:w-1/2 flex justify-center">
-            <img src="https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?w=500&q=80" alt="Trainer" loading="lazy" className="max-h-[500px] object-contain" />
+            <img src={img5} alt="Trainer" loading="lazy" className="max-h-[600px] object-contain -mt-12" />
           </div>
         </div>
       </section>
