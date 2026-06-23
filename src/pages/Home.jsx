@@ -2,6 +2,9 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import BMICalculator from '../components/BMICalculator';
 import TestimonialSlider from '../components/TestimonialSlider';
+import img1 from '../assets/images/1.webp';
+import img2 from '../assets/images/2.webp';
+import img3 from '../assets/images/3.webp';
 
 export default function Home() {
   const fadeInUp = {
@@ -118,9 +121,9 @@ export default function Home() {
           </motion.div>
 
           <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <img src="src/assets/images/1.webp" alt="Workout" loading="lazy" className="w-full h-64 object-cover rounded-2xl md:-mt-8 shadow-lg" />
-            <img src="src/assets/images/2.webp" alt="Workout" loading="lazy" className="w-full h-64 object-cover rounded-2xl md:mt-8 shadow-lg" />
-            <img src="src/assets/images/3.webp" alt="Workout" loading="lazy" className="w-full h-64 object-cover rounded-2xl md:-mt-4 shadow-lg" />
+            <img src={img1} alt="Workout" loading="lazy" className="w-full h-64 object-cover rounded-2xl md:-mt-8 shadow-lg" />
+            <img src={img2} alt="Workout" loading="lazy" className="w-full h-64 object-cover rounded-2xl md:mt-8 shadow-lg" />
+            <img src={img3} alt="Workout" loading="lazy" className="w-full h-64 object-cover rounded-2xl md:-mt-4 shadow-lg" />
           </div>
         </div>
       </section>

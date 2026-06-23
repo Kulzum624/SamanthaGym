@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import img5 from '../assets/images/5.webp';
 
 export default function BMICalculator({ variant = 'dark' }) {
   const [gender, setGender] = useState('female');
@@ -128,7 +129,7 @@ export default function BMICalculator({ variant = 'dark' }) {
         <div className="w-full md:w-1/2 flex flex-col items-center justify-end">
           {isDark ? (
             <img
-              src="src/assets/images/5.webp"
+              src={img5}
               alt="Trainer"
               loading="lazy"
               className="w-full max-w-[450px] h-auto object-contain -mb-12"

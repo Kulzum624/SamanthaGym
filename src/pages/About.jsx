@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import BreadcrumbHeader from '../components/BreadcrumbHeader';
 import NewsletterSection from '../components/NewsletterSection';
+import img4 from '../assets/images/4.webp';
 
 const Counter = ({ end, label }) => {
   const [count, setCount] = useState(0);
@@ -233,7 +234,7 @@ export default function About() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             {[
-              'src/assets/images/4.webp',
+              img4,
               'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&q=80',
               'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300&q=80',
               'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=300&q=80'
