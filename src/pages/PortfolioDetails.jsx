@@ -16,7 +16,7 @@ export default function PortfolioDetails() {
   ];
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-[128px]">
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-[120px]">
       <BreadcrumbHeader 
         title="Programs Details" 
         current="Programs Details" 
@@ -32,7 +32,7 @@ export default function PortfolioDetails() {
             <h2 className="font-poppins font-bold text-3xl md:text-[40px] text-primary-dark mb-4 leading-tight">
               Bodybuilding Localized
             </h2>
-            <span className="inline-block bg-primary-pink/10 text-primary-pink px-4 py-1.5 rounded-full text-sm font-semibold mb-8">
+            <span className="inline-block bg-primary-lime/10 text-primary-lime px-4 py-1.5 rounded-full text-sm font-semibold mb-8">
               #min 16 weeks workout
             </span>
             
@@ -41,9 +41,9 @@ export default function PortfolioDetails() {
               Aliquam etiam erat velit scelerisque in dictum non consectetur a. Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Faucibus pulvinar elementum integer enim neque volutpat ac tincidunt.
             </p>
             <ul className="space-y-3 mb-10 text-muted">
-              <li className="flex gap-2"><svg className="w-5 h-5 text-primary-pink shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg> Pretium viverra suspendisse potenti nullam ac tortor</li>
-              <li className="flex gap-2"><svg className="w-5 h-5 text-primary-pink shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg> Faucibus ornare suspendisse sed nisi lacus sed viverra</li>
-              <li className="flex gap-2"><svg className="w-5 h-5 text-primary-pink shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg> Odio ut sem nulla pharetra diam sit amet nisl</li>
+              <li className="flex gap-2"><svg className="w-5 h-5 text-primary-lime shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg> Pretium viverra suspendisse potenti nullam ac tortor</li>
+              <li className="flex gap-2"><svg className="w-5 h-5 text-primary-lime shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg> Faucibus ornare suspendisse sed nisi lacus sed viverra</li>
+              <li className="flex gap-2"><svg className="w-5 h-5 text-primary-lime shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg> Odio ut sem nulla pharetra diam sit amet nisl</li>
             </ul>
 
             <h4 className="font-poppins font-bold text-xl text-primary-dark mb-6">To enter this class you will need:</h4>
@@ -54,7 +54,7 @@ export default function PortfolioDetails() {
                  { num: '3.', title: 'Water', desc: 'At tellus at urna condimentum mattis pellentesque id nibh tortor.' }
                ].map((item, idx) => (
                  <div key={idx} className="flex gap-4">
-                   <div className="font-poppins font-bold text-xl text-primary-pink">{item.num}</div>
+                   <div className="font-poppins font-bold text-xl text-primary-lime">{item.num}</div>
                    <div>
                      <h5 className="font-poppins font-bold text-lg text-primary-dark mb-1">{item.title}</h5>
                      <p className="text-muted text-sm">{item.desc}</p>
@@ -73,7 +73,7 @@ export default function PortfolioDetails() {
                      <span>70%</span>
                    </div>
                    <div className="h-2 w-full bg-gray-200 rounded-full overflow-hidden">
-                     <div className="h-full bg-primary-pink rounded-full w-[70%]" />
+                     <div className="h-full bg-primary-lime rounded-full w-[70%]" />
                    </div>
                  </div>
                  <div>
@@ -82,7 +82,7 @@ export default function PortfolioDetails() {
                      <span>60%</span>
                    </div>
                    <div className="h-2 w-full bg-gray-200 rounded-full overflow-hidden">
-                     <div className="h-full bg-primary-pink rounded-full w-[60%]" />
+                     <div className="h-full bg-primary-lime rounded-full w-[60%]" />
                    </div>
                  </div>
                  <div>
@@ -91,7 +91,7 @@ export default function PortfolioDetails() {
                      <span>80%</span>
                    </div>
                    <div className="h-2 w-full bg-gray-200 rounded-full overflow-hidden">
-                     <div className="h-full bg-primary-pink rounded-full w-[80%]" />
+                     <div className="h-full bg-primary-lime rounded-full w-[80%]" />
                    </div>
                  </div>
                </div>
@@ -100,8 +100,8 @@ export default function PortfolioDetails() {
 
           {/* Right Images */}
           <div className="w-full lg:w-[40%] flex flex-col gap-6">
-             <img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=700&q=80" alt="Detail 1" className="w-full h-auto rounded-2xl shadow-lg" />
-             <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=700&q=80" alt="Detail 2" className="w-full h-auto rounded-2xl shadow-lg" />
+             <img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=700&q=80" alt="Detail 1" className="w-full h-auto shadow-lg" />
+             <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=700&q=80" alt="Detail 2" className="w-full h-auto shadow-lg" />
           </div>
         </div>
       </section>
@@ -112,7 +112,7 @@ export default function PortfolioDetails() {
         <div className="absolute inset-0 bg-[#1C1C2E]/80 z-0" />
         <div className="relative z-10 text-center px-4">
           <h3 className="font-poppins font-bold text-3xl md:text-[40px] text-white mb-8">Start changing your life now</h3>
-          <Link to="/pricing-table" className="inline-block bg-primary-pink text-white rounded-full px-10 py-4 font-poppins font-semibold hover:bg-[#d44c77] hover:scale-105 transition-all shadow-lg">
+          <Link to="/pricing-table" className="inline-block bg-primary-lime text-black rounded-full px-10 py-4 font-poppins font-semibold hover:brightness-110 transition-all shadow-lg">
             Join Now
           </Link>
         </div>
@@ -134,7 +134,7 @@ export default function PortfolioDetails() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="flex justify-between items-end mb-12">
             <h2 className="font-poppins font-bold text-3xl text-primary-dark">You may also be interested in</h2>
-            <Link to="/portfolio" className="hidden sm:flex text-primary-pink font-semibold hover:underline items-center gap-2">
+            <Link to="/portfolio" className="hidden sm:flex text-primary-lime font-semibold hover:underline items-center gap-2">
               View more <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
             </Link>
           </div>
@@ -148,3 +148,8 @@ export default function PortfolioDetails() {
     </motion.div>
   );
 }
+
+
+
+
+

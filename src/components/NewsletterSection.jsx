@@ -1,31 +1,33 @@
 export default function NewsletterSection() {
   return (
-    <section className="bg-light py-16 px-4">
-      <div className="max-w-xl mx-auto text-center">
-        <h2 className="font-poppins font-bold text-2xl md:text-[28px] text-primary-dark mb-4">
-          Subscribe to Newsletter
+    <section className="bg-primary-dark py-16 px-4">
+      <div className="max-w-2xl mx-auto text-center">
+        <h2 className="font-poppins font-black text-2xl md:text-3xl text-white uppercase tracking-tight mb-2 heading-dots">
+          Stay Updated
         </h2>
-        <p className="text-muted text-[16px] mb-8">
-          Duis at consectetur lorem donec massa sapien faucibus et molestie. Ut etiam sit amet nisl purus. Massa tempor nec feugiat nisl pretium.
+        <p className="text-gray-400 text-[15px] mb-8">
+          Stay updated with the latest news.
         </p>
-        <form className="relative mb-4" onSubmit={(e) => e.preventDefault()}>
-          <input 
-            type="email" 
-            placeholder="Your Email" 
-            className="w-full h-14 pl-6 pr-[120px] rounded-full border border-borderLight focus:outline-none focus:border-primary-pink transition-colors font-inter"
+        <form className="flex flex-col sm:flex-row gap-0 max-w-lg mx-auto" onSubmit={(e) => e.preventDefault()}>
+          <input
+            type="email"
+            placeholder="Your email address"
+            className="flex-1 h-14 px-6 bg-white/10 border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:border-primary-lime transition-colors font-inter"
             required
           />
-          <button 
-            type="submit" 
-            className="absolute right-1 top-1 h-12 bg-primary-pink text-white px-8 rounded-full font-poppins font-semibold text-[15px] hover:bg-[#d44c77] transition-colors"
+          <button
+            type="submit"
+            className="btn-lime h-14 px-8 text-sm whitespace-nowrap"
           >
             Subscribe
           </button>
         </form>
-        <p className="text-[#9CA3AF] text-[13px] italic">
-          Nec feugiat in fermentum posuere urna nec tincidunt praesent.
-        </p>
       </div>
     </section>
   );
 }
+
+
+
+
+

@@ -5,6 +5,7 @@ import { AnimatePresence } from 'framer-motion';
 import AnnouncementBar from './components/AnnouncementBar';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 // Pages
 import Home from './pages/Home';
@@ -57,9 +58,15 @@ function App() {
           <AnimatedRoutes />
         </main>
         <Footer />
+        <ScrollToTopButton />
       </div>
     </BrowserRouter>
   );
 }
 
 export default App;
+
+
+
+
+

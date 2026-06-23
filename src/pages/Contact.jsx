@@ -17,7 +17,7 @@ export default function Contact() {
   };
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-[128px]">
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-[120px]">
       <BreadcrumbHeader
         title="Contact with me"
         current="Contact"
@@ -46,7 +46,7 @@ export default function Contact() {
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
               className="bg-white border border-gray-100 p-6 rounded-2xl flex items-start gap-4 hover:shadow-md transition-shadow"
             >
-              <div className="w-12 h-12 bg-[#FFF0F5] rounded-xl flex items-center justify-center text-primary-pink shrink-0">
+              <div className="w-12 h-12 bg-primary-lime/10 rounded-xl flex items-center justify-center text-primary-lime shrink-0">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
               </div>
               <div>
@@ -59,12 +59,12 @@ export default function Contact() {
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
               className="bg-white border border-gray-100 p-6 rounded-2xl flex items-start gap-4 hover:shadow-md transition-shadow"
             >
-              <div className="w-12 h-12 bg-[#FFF0F5] rounded-xl flex items-center justify-center text-primary-pink shrink-0">
+              <div className="w-12 h-12 bg-primary-lime/10 rounded-xl flex items-center justify-center text-primary-lime shrink-0">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
               </div>
               <div>
                 <h4 className="font-poppins font-bold text-lg text-primary-dark mb-1">Call My</h4>
-                <a href="tel:+1234567890" className="text-muted text-sm hover:text-primary-pink transition-colors">+1 (234) 567 890</a>
+                <a href="tel:+1234567890" className="text-muted text-sm hover:text-primary-lime transition-colors">+1 (234) 567 890</a>
               </div>
             </motion.div>
 
@@ -72,12 +72,12 @@ export default function Contact() {
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
               className="bg-white border border-gray-100 p-6 rounded-2xl flex items-start gap-4 hover:shadow-md transition-shadow"
             >
-              <div className="w-12 h-12 bg-[#FFF0F5] rounded-xl flex items-center justify-center text-primary-pink shrink-0">
+              <div className="w-12 h-12 bg-primary-lime/10 rounded-xl flex items-center justify-center text-primary-lime shrink-0">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
               </div>
               <div>
                 <h4 className="font-poppins font-bold text-lg text-primary-dark mb-1">E-mail</h4>
-                <a href="mailto:example@gmail.com" className="text-muted text-sm hover:text-primary-pink transition-colors">example@gmail.com</a>
+                <a href="mailto:example@gmail.com" className="text-muted text-sm hover:text-primary-lime transition-colors">example@gmail.com</a>
               </div>
             </motion.div>
           </div>
@@ -99,19 +99,19 @@ export default function Contact() {
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <input type="text" placeholder="Name" className="w-full h-14 px-6 rounded-xl border border-gray-200 focus:outline-none focus:border-primary-pink bg-light" required />
+                <input type="text" placeholder="Name" className="w-full h-14 px-6 border border-gray-200 focus:outline-none focus:border-primary-lime bg-light" required />
               </div>
               <div>
-                <input type="email" placeholder="Email" className="w-full h-14 px-6 rounded-xl border border-gray-200 focus:outline-none focus:border-primary-pink bg-light" required />
+                <input type="email" placeholder="Email" className="w-full h-14 px-6 border border-gray-200 focus:outline-none focus:border-primary-lime bg-light" required />
               </div>
               <div>
-                <input type="tel" placeholder="Phone" className="w-full h-14 px-6 rounded-xl border border-gray-200 focus:outline-none focus:border-primary-pink bg-light" />
+                <input type="tel" placeholder="Phone" className="w-full h-14 px-6 border border-gray-200 focus:outline-none focus:border-primary-lime bg-light" />
               </div>
               <div>
-                <textarea placeholder="Message" rows="4" className="w-full p-6 rounded-xl border border-gray-200 focus:outline-none focus:border-primary-pink bg-light resize-none" required></textarea>
+                <textarea placeholder="Message" rows="4" className="w-full p-6 border border-gray-200 focus:outline-none focus:border-primary-lime bg-light resize-none" required></textarea>
               </div>
 
-              <button type="submit" className="w-full bg-primary-pink text-white h-14 rounded-full font-poppins font-semibold text-[15px] hover:bg-[#d44c77] transition-all shadow-md">
+              <button type="submit" className="w-full bg-primary-lime text-black h-14 font-poppins font-bold uppercase tracking-widest text-[15px] hover:brightness-110 transition-all shadow-md">
                 Join Now
               </button>
 
@@ -151,12 +151,12 @@ export default function Contact() {
             <input
               type="email"
               placeholder="Your Email"
-              className="w-full h-14 pl-6 pr-[120px] rounded-full border border-white/20 bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-primary-pink transition-colors font-inter"
+              className="w-full h-14 pl-6 pr-[120px] rounded-full border border-white/20 bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-primary-lime transition-colors font-inter"
               required
             />
             <button
               type="submit"
-              className="absolute right-1 top-1 h-12 bg-primary-pink text-white px-8 rounded-full font-poppins font-semibold text-sm hover:bg-[#d44c77] transition-colors shadow-md"
+              className="absolute right-1 top-1 h-12 bg-primary-lime text-black px-8 font-poppins font-bold uppercase tracking-widest text-sm hover:brightness-110 transition-colors shadow-md"
             >
               Subscribe
             </button>
@@ -170,3 +170,8 @@ export default function Contact() {
     </motion.div>
   );
 }
+
+
+
+
+

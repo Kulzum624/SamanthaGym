@@ -8,11 +8,11 @@ export default {
     extend: {
       colors: {
         primary: {
-          pink: '#E75F8A',
-          dark: '#1C1C2E',
+          lime: '#AADD00',
+          dark: '#111111',
         },
         muted: '#6B7280',
-        light: '#F8F8FC',
+        light: '#F5F5F5',
         borderLight: '#E5E7EB',
       },
       fontFamily: {

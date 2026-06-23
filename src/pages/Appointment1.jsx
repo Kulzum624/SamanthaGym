@@ -15,7 +15,7 @@ export default function Appointment1() {
   };
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-[128px]">
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-[120px]">
       <section className="min-h-[calc(100vh-128px)] flex flex-col md:flex-row">
         
         {/* Left Form (55%) */}
@@ -35,7 +35,7 @@ export default function Appointment1() {
               <div className="flex flex-col">
                 <label className="text-sm font-semibold text-primary-dark mb-2">Program Type</label>
                 <select 
-                  className="w-full border-b border-gray-200 py-3 text-muted focus:outline-none focus:border-primary-pink bg-transparent transition-colors appearance-none"
+                  className="w-full border-b border-gray-200 py-3 text-muted focus:outline-none focus:border-primary-lime bg-transparent transition-colors appearance-none"
                   value={formData.program}
                   onChange={(e) => setFormData({...formData, program: e.target.value})}
                   required
@@ -54,7 +54,7 @@ export default function Appointment1() {
                   <input 
                     type="checkbox" 
                     id="schedules"
-                    className="w-5 h-5 border-2 border-gray-300 rounded text-primary-pink focus:ring-primary-pink cursor-pointer appearance-none checked:bg-primary-pink checked:border-primary-pink transition-colors"
+                    className="w-5 h-5 border-2 border-gray-300 rounded text-primary-lime focus:ring-primary-lime cursor-pointer appearance-none checked:bg-primary-lime checked:border-primary-lime transition-colors"
                     checked={formData.schedules}
                     onChange={(e) => setFormData({...formData, schedules: e.target.checked})}
                   />
@@ -68,13 +68,13 @@ export default function Appointment1() {
               </div>
 
               <div>
-                <Link to="/schedule" className="text-primary-pink font-semibold text-sm hover:underline flex items-center gap-2 mb-8">
+                <Link to="/schedule" className="text-primary-lime font-semibold text-sm hover:underline flex items-center gap-2 mb-8">
                   View Training Schedule <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                 </Link>
                 
                 <button 
                   type="submit" 
-                  className="w-full bg-primary-pink text-white h-14 rounded-full font-poppins font-semibold text-[15px] hover:bg-[#d44c77] transition-all hover:shadow-lg hover:-translate-y-0.5"
+                  className="w-full bg-primary-lime text-black h-14 font-poppins font-bold uppercase tracking-widest text-[15px] hover:brightness-110 transition-all hover:shadow-lg hover:-translate-y-0.5"
                 >
                   Join Now
                 </button>
@@ -102,3 +102,8 @@ export default function Appointment1() {
     </motion.div>
   );
 }
+
+
+
+
+

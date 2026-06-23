@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import img10 from "../assets/images/10.webp";
 
 export default function TestimonialSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,7 +37,7 @@ export default function TestimonialSlider() {
   return (
     <section className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <motion.h2 
+        <motion.h2
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -48,7 +49,7 @@ export default function TestimonialSlider() {
 
         <div className="relative">
           <AnimatePresence mode="wait">
-            <motion.div 
+            <motion.div
               key={currentIndex}
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -58,15 +59,15 @@ export default function TestimonialSlider() {
             >
               {/* Left Images */}
               <div className="flex gap-4 w-full md:w-1/2 justify-center">
-                <img 
-                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&q=80" 
-                  alt="Before" 
+                <img
+                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&q=80"
+                  alt="Before"
                   loading="lazy"
                   className="w-1/2 h-auto rounded-2xl object-cover shadow-lg"
                 />
-                <img 
-                  src="https://images.unsplash.com/photo-1499635168851-81ceb5ced4a4?w=300&q=80" 
-                  alt="After" 
+                <img
+                  src={img10}
+                  alt="After"
                   loading="lazy"
                   className="w-1/2 h-auto rounded-2xl object-cover shadow-lg"
                 />
@@ -78,9 +79,9 @@ export default function TestimonialSlider() {
                   "{testimonials[currentIndex].quote}"
                 </p>
                 <div className="flex items-center gap-4">
-                  <img 
-                    src={testimonials[currentIndex].avatar} 
-                    alt={testimonials[currentIndex].name} 
+                  <img
+                    src={testimonials[currentIndex].avatar}
+                    alt={testimonials[currentIndex].name}
                     loading="lazy"
                     className="w-16 h-16 rounded-full object-cover"
                   />
@@ -88,7 +89,7 @@ export default function TestimonialSlider() {
                     <h4 className="font-poppins font-bold text-primary-dark text-lg">
                       {testimonials[currentIndex].name}
                     </h4>
-                    <span className="text-primary-pink font-inter text-sm font-medium">
+                    <span className="text-primary-lime font-inter text-sm font-medium">
                       {testimonials[currentIndex].label}
                     </span>
                   </div>
@@ -99,24 +100,24 @@ export default function TestimonialSlider() {
 
           {/* Controls */}
           <div className="flex justify-center items-center gap-6 mt-12">
-            <button 
+            <button
               onClick={handlePrev}
-              className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-primary-dark hover:bg-primary-pink hover:text-white hover:border-primary-pink transition-all"
+              className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-primary-dark hover:bg-primary-lime hover:text-white hover:border-primary-lime transition-all"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
             </button>
             <div className="flex gap-2">
               {testimonials.map((_, idx) => (
-                <button 
+                <button
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
-                  className={`w-3 h-3 rounded-full transition-colors ${currentIndex === idx ? 'bg-primary-pink' : 'bg-gray-200'}`}
+                  className={`w-3 h-3 rounded-full transition-colors ${currentIndex === idx ? 'bg-primary-lime' : 'bg-gray-200'}`}
                 />
               ))}
             </div>
-            <button 
+            <button
               onClick={handleNext}
-              className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-primary-dark hover:bg-primary-pink hover:text-white hover:border-primary-pink transition-all"
+              className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-primary-dark hover:bg-primary-lime hover:text-white hover:border-primary-lime transition-all"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
             </button>
@@ -126,3 +127,8 @@ export default function TestimonialSlider() {
     </section>
   );
 }
+
+
+
+
+

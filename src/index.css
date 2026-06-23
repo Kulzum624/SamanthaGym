@@ -11,3 +11,85 @@
 html {
   scroll-behavior: smooth;
 }
+
+@layer utilities {
+
+  @keyframes float-dots {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+
+  /* Dot grid decorative pattern */
+  .dot-grid-lime, .dot-grid-dark, .dot-grid-gray {
+    animation: float-dots 5s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  .dot-grid-lime {
+    background-image: radial-gradient(circle, #AADD00 3px, transparent 1.5px);
+    background-size: 18px 18px;
+  }
+
+  .dot-grid-dark {
+    background-image: radial-gradient(circle, rgba(17, 17, 17, 0.375) 3px, transparent 0.5px);
+    background-size: 18px 18px;
+  }
+
+  .dot-grid-gray {
+    background-image: radial-gradient(circle, #cccccc 3px, transparent 1.5px);
+    background-size: 18px 18px;
+  }
+
+  /* Rectangular sharp button */
+  .btn-lime {
+    @apply bg-primary-lime text-black font-poppins font-bold uppercase tracking-widest px-8 py-4 inline-block transition-all duration-300 relative overflow-hidden z-10;
+    border-radius: 0 !important;
+  }
+  .btn-lime::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-color: #111111;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+    z-index: -1;
+  }
+  .btn-lime:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  .btn-lime:hover {
+    @apply text-white;
+  }
+
+  .btn-dark {
+    @apply bg-primary-dark text-white font-poppins font-bold uppercase tracking-widest px-8 py-4 inline-block transition-all duration-300 relative overflow-hidden z-10;
+    border-radius: 0 !important;
+  }
+  .btn-dark::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-color: #AADD00;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+    z-index: -1;
+  }
+  .btn-dark:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  .btn-dark:hover {
+    @apply text-black;
+  }
+
+  /* Heading dot trail */
+  .heading-dots::after {
+    content: ' • • • • ';
+    color: #AADD00;
+    font-size: 0.6em;
+    letter-spacing: 0.3em;
+  }
+}

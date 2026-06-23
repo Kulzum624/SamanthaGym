@@ -47,7 +47,7 @@ export default function BlogStyle1() {
   ];
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-[128px]">
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-[120px]">
       <BreadcrumbHeader
         title="Healthy Tips & Tricks"
         current="Blog Style 1"
@@ -60,7 +60,7 @@ export default function BlogStyle1() {
             <motion.div
               key={idx}
               whileHover={{ y: -4, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)' }}
-              className="flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden border border-gray-100 transition-all duration-300 group"
+              className="flex flex-col md:flex-row bg-white overflow-hidden border border-gray-100 transition-all duration-300 group"
             >
               {/* Left Image */}
               <div className="w-full md:w-[400px] h-64 md:h-auto overflow-hidden shrink-0">
@@ -74,17 +74,17 @@ export default function BlogStyle1() {
               {/* Right Content */}
               <div className="p-8 flex flex-col justify-center flex-1">
                 <div className="flex gap-2 mb-4">
-                  <span className="inline-block bg-primary-pink/10 text-primary-pink px-4 py-1.5 rounded-full text-xs font-semibold capitalize tracking-wide">
+                  <span className="inline-block bg-primary-lime/10 text-primary-lime px-4 py-1.5 rounded-full text-xs font-semibold capitalize tracking-wide">
                     {post.cat}
                   </span>
                   {post.cat2 && (
-                    <span className="inline-block bg-primary-pink/10 text-primary-pink px-4 py-1.5 rounded-full text-xs font-semibold capitalize tracking-wide">
+                    <span className="inline-block bg-primary-lime/10 text-primary-lime px-4 py-1.5 rounded-full text-xs font-semibold capitalize tracking-wide">
                       {post.cat2}
                     </span>
                   )}
                 </div>
 
-                <h3 className="font-poppins font-bold text-2xl md:text-3xl text-primary-dark mb-4 group-hover:text-primary-pink transition-colors">
+                <h3 className="font-poppins font-bold text-2xl md:text-3xl text-primary-dark mb-4 group-hover:text-primary-lime transition-colors">
                   <Link to="/blog-details">{post.title}</Link>
                 </h3>
 
@@ -93,7 +93,7 @@ export default function BlogStyle1() {
                 </p>
 
                 <div className="mb-6">
-                  <Link to="/blog-details" className="text-primary-dark font-semibold border-b-2 border-primary-dark pb-1 hover:text-primary-pink hover:border-primary-pink transition-colors">
+                  <Link to="/blog-details" className="text-primary-dark font-semibold border-b-2 border-primary-dark pb-1 hover:text-primary-lime hover:border-primary-lime transition-colors">
                     Read More &rarr;
                   </Link>
                 </div>
@@ -115,7 +115,7 @@ export default function BlogStyle1() {
           ))}
 
           <div className="text-center mt-12">
-            <button className="inline-block px-10 py-4 rounded-full border-2 border-primary-pink text-primary-pink font-poppins font-semibold hover:bg-primary-pink hover:text-white transition-colors">
+            <button className="inline-block px-10 py-4 btn-lime text-sm transition-all">
               View more
             </button>
           </div>
@@ -126,3 +126,8 @@ export default function BlogStyle1() {
     </motion.div>
   );
 }
+
+
+
+
+
