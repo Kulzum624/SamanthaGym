@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import BreadcrumbHeader from '../components/BreadcrumbHeader';
+import SEO from '../components/SEO';
 
 export default function Contact() {
   const [formStatus, setFormStatus] = useState('idle');
@@ -18,6 +19,7 @@ export default function Contact() {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-[120px]">
+      <SEO title="Contact" />
       <BreadcrumbHeader
         title="Contact with me"
         current="Contact"
@@ -151,7 +153,7 @@ export default function Contact() {
             <input
               type="email"
               placeholder="Your Email"
-              className="w-full h-14 pl-6 pr-[120px] rounded-full border border-white/20 bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-primary-lime transition-colors font-inter"
+              className="w-full h-14 pl-6 pr-[120px] border border-white/20 bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-primary-lime transition-colors font-inter"
               required
             />
             <button

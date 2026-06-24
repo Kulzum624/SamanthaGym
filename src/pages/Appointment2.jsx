@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import img12 from '../assets/images/12.webp';
+import img9 from '../assets/images/9.webp';
+import SEO from '../components/SEO';
 
 export default function Appointment2() {
   const [formData, setFormData] = useState({
@@ -15,7 +16,11 @@ export default function Appointment2() {
   };
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-[120px]">
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-[120px] bg-light">
+      <SEO 
+        title="Schedule Your Session" 
+        description="Book your personal fitness training session with Kulzum M. today and start your journey towards a healthier life."
+      />
       <section className="min-h-[calc(100vh-128px)] flex flex-col md:flex-row border-t border-gray-100">
 
         {/* Left Image & Quote (45%) */}
@@ -25,10 +30,10 @@ export default function Appointment2() {
             className="relative w-full max-w-[400px] mb-8"
           >
             <img
-              src={img12}
+              src={img9}
               alt="Trainer"
               loading="lazy"
-              className="w-full h-auto rounded-2xl shadow-xl shadow-primary-lime/20 object-cover"
+              className="w-full h-auto rounded-2xl shadow-xl shadow-primary-lime/20 object-cover -scale-x-100"
             />
           </motion.div>
           <motion.p
@@ -99,6 +104,13 @@ export default function Appointment2() {
                 >
                   Join Now
                 </button>
+                
+                <div className="flex items-center gap-2 mt-4 text-sm text-gray-500 justify-center">
+                  <div className="flex text-yellow-400">
+                    {'★★★★★'}
+                  </div>
+                  <span>Join 47+ loyal clients</span>
+                </div>
               </div>
             </form>
           </motion.div>

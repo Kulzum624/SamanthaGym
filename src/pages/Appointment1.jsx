@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import img9 from '../assets/images/9.webp';
+import SEO from '../components/SEO';
 
 export default function Appointment1() {
   const [formData, setFormData] = useState({
@@ -16,11 +18,15 @@ export default function Appointment1() {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-[120px]">
+      <SEO 
+        title="Book Appointment" 
+        description="Book your personal fitness training session with Kulzum M. today and start your journey towards a healthier life."
+      />
       <section className="min-h-[calc(100vh-128px)] flex flex-col md:flex-row">
-        
+
         {/* Left Form (55%) */}
         <div className="w-full md:w-[55%] bg-white p-8 md:p-16 flex flex-col justify-center border-t border-gray-100">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}
             className="max-w-lg mx-auto w-full"
           >
@@ -34,10 +40,10 @@ export default function Appointment1() {
             <form onSubmit={handleSubmit} className="space-y-8">
               <div className="flex flex-col">
                 <label className="text-sm font-semibold text-primary-dark mb-2">Program Type</label>
-                <select 
+                <select
                   className="w-full border-b border-gray-200 py-3 text-muted focus:outline-none focus:border-primary-lime bg-transparent transition-colors appearance-none"
                   value={formData.program}
-                  onChange={(e) => setFormData({...formData, program: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, program: e.target.value })}
                   required
                 >
                   <option value="" disabled>Select a program</option>
@@ -51,12 +57,12 @@ export default function Appointment1() {
 
               <div className="flex items-center gap-3">
                 <div className="relative flex items-center">
-                  <input 
-                    type="checkbox" 
+                  <input
+                    type="checkbox"
                     id="schedules"
                     className="w-5 h-5 border-2 border-gray-300 rounded text-primary-lime focus:ring-primary-lime cursor-pointer appearance-none checked:bg-primary-lime checked:border-primary-lime transition-colors"
                     checked={formData.schedules}
-                    onChange={(e) => setFormData({...formData, schedules: e.target.checked})}
+                    onChange={(e) => setFormData({ ...formData, schedules: e.target.checked })}
                   />
                   {formData.schedules && (
                     <svg className="w-3.5 h-3.5 text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
@@ -71,13 +77,20 @@ export default function Appointment1() {
                 <Link to="/schedule" className="text-primary-lime font-semibold text-sm hover:underline flex items-center gap-2 mb-8">
                   View Training Schedule <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                 </Link>
-                
-                <button 
-                  type="submit" 
+
+                <button
+                  type="submit"
                   className="w-full bg-primary-lime text-black h-14 font-poppins font-bold uppercase tracking-widest text-[15px] hover:brightness-110 transition-all hover:shadow-lg hover:-translate-y-0.5"
                 >
                   Join Now
                 </button>
+
+                <div className="flex items-center gap-2 mt-4 text-sm text-gray-500">
+                  <div className="flex text-yellow-400">
+                    {'★★★★★'}
+                  </div>
+                  <span>Join 47+ loyal clients already seeing results</span>
+                </div>
               </div>
             </form>
           </motion.div>
@@ -85,10 +98,10 @@ export default function Appointment1() {
 
         {/* Right Quote & Image (45%) */}
         <div className="w-full md:w-[45%] relative min-h-[400px] flex items-center justify-center p-12">
-          <div className="absolute inset-0 bg-cover bg-center z-0" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1400&q=80)' }} />
+          <div className="absolute inset-0 bg-cover bg-center z-0" style={{ backgroundImage: `url(${img9})` }} />
           <div className="absolute inset-0 bg-[#1C1C2E]/80 z-0" />
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
             className="relative z-10 text-center max-w-md"
           >

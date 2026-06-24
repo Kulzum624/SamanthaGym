@@ -31,10 +31,10 @@ export default function AnnouncementBar() {
           className="fixed top-0 left-0 w-full h-12 bg-primary-dark z-50 flex items-center justify-between px-4 lg:px-12"
         >
           <div className="flex items-center text-sm">
-            <span className="text-white font-bold mr-2 hidden sm:inline">Let's be Together</span>
-            <span className="text-gray-400 mr-2 hidden md:inline">Don't miss the next workout:</span>
-            <span className="text-primary-lime font-bold mr-1">22 June</span>
-            <span className="text-primary-lime font-bold">6:30pm</span>
+            <span className="text-white font-bold mr-2 hidden sm:inline">🔥 Special Offer</span>
+            <span className="text-gray-400 mr-2 hidden md:inline">Only 3 spots left for June Coaching!</span>
+            <span className="text-primary-lime font-bold mr-1">Book</span>
+            <span className="text-primary-lime font-bold">Now</span>
           </div>
           <div className="hidden lg:flex items-center text-xs text-gray-500">
             <span className="mr-2">Huntington Central Park, 18381 Goldenwest St, Huntington Beach</span>

@@ -2,12 +2,40 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import NewsletterSection from '../components/NewsletterSection';
 import img6 from '../assets/images/6.webp';
+import img15 from '../assets/images/15.webp';
+import SEO from '../components/SEO';
 
 export default function BlogDetails() {
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-[120px]">
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-[120px] bg-light">
+      <SEO
+        title="7 Tips for Effective Practice"
+        description="Learn the 7 top tips to make your workouts more effective and achieve your fitness goals faster."
+        type="article"
+        image="https://kulzum-fitness.netlify.app/assets/images/15.webp"
+        schemaData={{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "7 Tips for Effective Practice",
+          "image": "https://kulzum-fitness.netlify.app/assets/images/15.webp",
+          "author": {
+            "@type": "Person",
+            "name": "KULZUM M."
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "KULZUM M. Fitness",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://kulzum-fitness.netlify.app/women.svg"
+            }
+          },
+          "datePublished": "2022-06-06",
+          "dateModified": "2026-06-24"
+        }}
+      />
 
-      {/* Full-width Hero */}
+      {/* ─── HEADER ─── */}
       <section className="w-full h-[400px] md:h-[500px]">
         <img
           src={img6}
@@ -236,7 +264,7 @@ export default function BlogDetails() {
             </div>
             <div className="bg-white overflow-hidden shadow-sm flex flex-col sm:flex-row-reverse border border-gray-100 group">
               <div className="w-full sm:w-[200px] h-48 sm:h-auto overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=400&q=80" alt="Related 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                <img src={img15} alt="Related 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
               </div>
               <div className="flex-1 p-6 flex flex-col justify-center">
                 <span className="text-xs text-primary-lime font-semibold uppercase tracking-wide mb-2">#lifestyle</span>

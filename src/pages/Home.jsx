@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import BMICalculator from '../components/BMICalculator';
 import TestimonialSlider from '../components/TestimonialSlider';
+import TrustBanner from '../components/TrustBanner';
+import SEO from '../components/SEO';
 import img1 from '../assets/images/1.webp';
 import img2 from '../assets/images/2.webp';
 import img3 from '../assets/images/3.webp';
@@ -41,6 +43,25 @@ export default function Home() {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+      <SEO
+        title="Home"
+        description="Samantha is a professional personal fitness trainer helping you build perfect health growth with personalized workout routines and nutrition strategies."
+        schemaData={{
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "KULZUM M. Fitness",
+          "image": "https://kulzum-fitness.netlify.app/women.svg",
+          "description": "Expert personal training, nutrition strategies, and tailored workout routines.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "18381 Goldenwest St",
+            "addressLocality": "Huntington Beach",
+            "addressRegion": "CA",
+            "addressCountry": "US"
+          },
+          "priceRange": "$$"
+        }}
+      />
 
       {/* ─── HERO SECTION ─── */}
       <section className="relative min-h-screen flex items-center overflow-hidden z-10">
@@ -71,10 +92,11 @@ export default function Home() {
             <motion.p variants={fadeUp} className="text-gray-600 text-[17px] max-w-[380px] mb-10 leading-relaxed">
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </motion.p>
-            <motion.div variants={fadeUp}>
-              <Link to="/portfolio" className="btn-lime text-sm">
-                JOIN NOW
+            <motion.div variants={fadeUp} className="flex flex-col gap-2">
+              <Link to="/portfolio" className="btn-lime text-sm w-fit">
+                START YOUR JOURNEY
               </Link>
+              <span className="text-xs text-gray-500 font-medium ml-1">✓ No commitment. Cancel anytime.</span>
             </motion.div>
           </motion.div>
 
@@ -124,6 +146,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── TRUST BANNER ─── */}
+      <TrustBanner />
+
       {/* ─── STATS BAR ─── */}
       <section className="bg-white border-y border-gray-100 relative z-20">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
@@ -169,6 +194,7 @@ export default function Home() {
                   <img
                     src={img1}
                     alt="Trainer workout"
+                    loading="lazy"
                     className="w-full h-44 object-cover relative z-10"
                   />
                 </motion.div>
@@ -178,6 +204,7 @@ export default function Home() {
                   <img
                     src={img2}
                     alt="Hana Evans portrait"
+                    loading="lazy"
                     className="w-full h-80 object-cover object-top"
                   />
                 </motion.div>
@@ -187,6 +214,7 @@ export default function Home() {
                   <img
                     src={img3}
                     alt="Active training"
+                    loading="lazy"
                     className="w-full h-60 object-cover"
                   />
                 </motion.div>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import BreadcrumbHeader from '../components/BreadcrumbHeader';
 import NewsletterSection from '../components/NewsletterSection';
 import img6 from '../assets/images/6.webp';
+import img15 from '../assets/images/15.webp';
 
 export default function BlogStyle1() {
   const posts = [
@@ -17,7 +18,7 @@ export default function BlogStyle1() {
     },
     {
       title: "7 Tips for Effective Practice",
-      img: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=900&q=80",
+      img: img15,
       cat: "lifestyle",
       author: "By Author Name",
       date: "June 06, 2022",

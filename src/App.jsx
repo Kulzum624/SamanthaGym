@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Link } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 // Global Components
@@ -48,19 +48,31 @@ function AnimatedRoutes() {
   );
 }
 
+import { HelmetProvider } from 'react-helmet-async';
+
 function App() {
   return (
-    <BrowserRouter>
-      <div className="flex flex-col min-h-screen">
-        <AnnouncementBar />
-        <Navbar />
-        <main className="flex-grow">
-          <AnimatedRoutes />
-        </main>
-        <Footer />
-        <ScrollToTopButton />
-      </div>
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <div className="flex flex-col min-h-screen relative pb-16 sm:pb-0">
+          <AnnouncementBar />
+          <Navbar />
+          <main className="flex-grow">
+            <AnimatedRoutes />
+          </main>
+          <Footer />
+          <ScrollToTopButton />
+          
+          {/* Mobile Floating CTA */}
+          <div className="fixed bottom-0 left-0 w-full z-50 sm:hidden bg-white border-t border-gray-200 p-3 shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
+            <Link to="/pricing-table" className="flex items-center justify-center w-full bg-primary-lime text-black font-poppins font-bold uppercase text-[15px] py-3.5 tracking-wider hover:brightness-110 transition-all gap-2">
+              START TODAY
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </Link>
+          </div>
+        </div>
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 

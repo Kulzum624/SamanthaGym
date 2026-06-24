@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import BreadcrumbHeader from '../components/BreadcrumbHeader';
 import BMICalculator from '../components/BMICalculator';
 import NewsletterSection from '../components/NewsletterSection';
+import SEO from '../components/SEO';
 import img13 from '../assets/images/13.webp';
 import img6 from '../assets/images/6.webp';
 import diet from '../assets/images/diet.webp';
@@ -29,6 +30,10 @@ export default function Schedule() {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-[120px]">
+      <SEO 
+        title="Training Schedule" 
+        description="View our weekly fitness training schedule and book your next session with KULZUM M."
+      />
       <BreadcrumbHeader title="Schedule" current="Schedule" />
 
       {/* Header Image */}

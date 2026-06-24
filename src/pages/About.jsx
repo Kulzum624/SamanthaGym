@@ -8,6 +8,7 @@ import img5 from '../assets/images/5.webp';
 import img8 from '../assets/images/8.webp';
 import img10 from '../assets/images/10.webp';
 import img11 from '../assets/images/11.webp';
+import SEO from '../components/SEO';
 
 const fadeUp = { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: 'easeOut' } } };
 const stagger = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.12 } } };
@@ -35,6 +36,10 @@ const Counter = ({ end, label }) => {
 export default function About() {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+      <SEO 
+        title="About KULZUM M." 
+        description="Learn more about KULZUM M., your dedicated personal fitness trainer with over 8 years of experience in strength, cardio, and nutrition coaching."
+      />
       <BreadcrumbHeader title="About Me" current="About" />
 
       {/* ─── HERO IMAGE COLLAGE ─── */}
