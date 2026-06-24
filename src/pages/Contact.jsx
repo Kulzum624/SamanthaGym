@@ -77,7 +77,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-poppins font-bold text-lg text-primary-dark mb-1">E-mail</h4>
-                <a href="mailto:example@gmail.com" className="text-muted text-sm hover:text-primary-lime transition-colors">example@gmail.com</a>
+                <a href="mailto:kulzummujtabakalhoro@gmail.com" className="text-muted text-sm hover:text-primary-lime transition-colors">kulzummujtabakalhoro@gmail.com</a>
               </div>
             </motion.div>
           </div>

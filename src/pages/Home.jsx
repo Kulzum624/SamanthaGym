@@ -43,7 +43,7 @@ export default function Home() {
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
 
       {/* ─── HERO SECTION ─── */}
-      <section className="relative min-h-screen flex items-center overflow-visible z-10">
+      <section className="relative min-h-screen flex items-center overflow-hidden z-10">
         {/* Radial lime-yellow gradient background */}
         <div className="absolute inset-0 z-0"
           style={{ background: 'radial-gradient(ellipse 80% 90% at 60% 40%, #efffb0 0%, #f5ffd6 30%, #fefff5 65%, #ffffff 100%)' }}
@@ -51,7 +51,7 @@ export default function Home() {
         {/* Dot grid top-right decoration */}
         <div className="absolute top-12 right-[5%] w-52 h-52 dot-grid-gray opacity-30 z-0" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 w-full grid grid-cols-1 md:grid-cols-12 min-h-[calc(100vh-72px)] items-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 w-full grid grid-cols-2 md:grid-cols-12 min-h-[calc(100vh-72px)] items-center">
 
           {/* Left text content — 5 cols */}
           <motion.div
@@ -62,7 +62,7 @@ export default function Home() {
           >
             <motion.h1
               variants={fadeUp}
-              className="font-poppins font-black text-[40px] md:text-[32px] lg:text-[52px] leading-[1.1] [word-spacing:20px] text-primary-dark uppercase mb-6 mt-40"
+              className="font-poppins font-black text-[40px] md:text-[32px] lg:text-[52px] leading-[1.1] [word-spacing:20px] text-primary-dark uppercase mb-6 mt-24 md:mt-40"
             >
               Build a Perfect
               <br />
@@ -87,25 +87,25 @@ export default function Home() {
           >
             {/* Box behind head */}
             {/* <div className="absolute top-40 -right-40 md:right-20 w-[250px] h-[250px] bg-primary-lime/20 z-0" /> */}
-            <div className="absolute top-40 -right-40 md:right-20 w-[250px] h-[250px] dot-grid-dark opacity-30 z-0" />
+            <div className="absolute top-40 -right-10 md:right-20 w-[150px] md:w-[250px] h-[150px] md:h-[250px] dot-grid-dark opacity-30 z-0" />
 
             <img
               src={img5}
               alt="Fitness Trainer Hana Evans"
-              className="w-full max-h-[90vh] top-20 object-cover object-top relative z-10"
+              className="w-auto h-[calc(100vh)] object-cover -bottom-[10%] relative z-10 overflow-visible"
             />
           </motion.div>
 
 
           {/* Right content card — 3 cols */}
           <motion.div
-            className="md:col-span-3 flex flex-col gap-6 py-12"
+            className="sm:hidden md:block md:col-span-3 flex flex-col gap-6 py-12"
             initial="hidden"
             animate="visible"
             variants={stagger}
           >
             {/* Quote card */}
-            <motion.div variants={fadeUp} className="bg-white/50 border border-white/80 rounded-xl backdrop-blur-sm right-20 w-[400px] p-6 shadow-sm relative z-20">
+            <motion.div variants={fadeUp} className="bg-white/50 border border-white/80 rounded-xl backdrop-blur-sm md:right-20 w-full max-w-[400px] p-6 shadow-sm relative z-20">
               {/* <div className="text-3xl text-gray-300 font-serif mb-2 leading-none">"</div> */}
 
               <p className="text-gray-700 text-[14px] italic leading-relaxed">
@@ -194,7 +194,7 @@ export default function Home() {
                 {/* Dot grid block bottom-right of left photo area */}
                 <motion.div
                   variants={fadeUp}
-                  className="absolute -bottom-5 left-[30%] w-80 h-40 bg-primary-lime dot-grid-dark"
+                  className="absolute -bottom-5 left-[10%] md:left-[30%] w-48 md:w-80 h-40 bg-primary-lime dot-grid-dark"
                   style={{ opacity: 0.85 }}
                 />
               </div>
@@ -435,7 +435,7 @@ export default function Home() {
       </section>
 
       {/* ─── CTA SECTION "READY TO GET STARTED" ─── */}
-      <section className="bg-white py-24">
+      <section className="bg-white py-24 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="flex flex-col md:flex-row gap-12 items-center">
 
